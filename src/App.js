@@ -2,6 +2,7 @@ import './App.css';
 import Sky from "./components/Sky.js";
 import AuthForm from './components/AuthForm';
 import {TodoWrapper} from './components/TodoWrapper';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -19,6 +20,16 @@ function App() {
           <div className="Todo-list">
               <TodoWrapper/>
           </div>
+
+          {/*TODO !!! Insert the flower here !!!*/}
+
+
+
+
+
+
+          {/*At the bottom of the code this appears*/}
+          <Footer/>
 
 
 
