@@ -24,7 +24,7 @@ function App() {
 
           {/*TODO !!! Insert the flower here !!!*/}
 
-          <Flower/>
+          {/*<Flower/>*/}
 
 
 

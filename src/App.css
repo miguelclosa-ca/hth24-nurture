@@ -22,9 +22,11 @@
 
 .App {
   text-align: center;
-  background-image: url("./BackgroundImages/landscape idea pixel arts1.png");
-  height: 1000vw  ;
-  width: 824px;
+  background-image: url("./BackgroundImages/background.gif");
+  background-repeat: no-repeat;
+  background-size: auto;
+  height: 1787px;
+  width: 823px;
   margin: auto;
 }
 
