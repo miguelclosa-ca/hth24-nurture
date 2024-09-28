@@ -6,6 +6,7 @@ function Footer(props) {
         <div className="footer-container">
             <p>A HackTheHill 2024 Project by: Max Sobota, Miguel Closa, Brady Kearley, Josh Sharpe</p>
         </div>
+
     );
 }
 
