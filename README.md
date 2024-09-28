@@ -6,7 +6,7 @@
 - Joshua Sharpe
 - Brady Kearley
 
-## Our project: 
+## Our project: Nurture
 
 We developed a new web application based on the hackathon's theme of **Self-Improvement**!
 
