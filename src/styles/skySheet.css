@@ -1,7 +1,18 @@
+:root{
+
+    /*https://x.com/Ashaife/status/1239011834851622913 */
+    --textColour: #fff9e5;
+    --skyColour: #8ecfca;
+    --footerColour: #786951;
+    --boxColour: #f8eebc;
+    --grassColour: #68b893;
+
+}
+
 *{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+
 
 }
 

@@ -1,6 +1,17 @@
+:root{
+
+  /*https://x.com/Ashaife/status/1239011834851622913 */
+  --textColour: #fff9e5;
+  --skyColour: #8ecfca;
+  --footerColour: #786951;
+  --boxColour: #f8eebc;
+  --grassColour: #68b893;
+
+}
+
 .App {
   text-align: center;
-  background-color: #6ab2e1;
+  background-color: var(--skyColour);
   height: 1000vw;
 }
 

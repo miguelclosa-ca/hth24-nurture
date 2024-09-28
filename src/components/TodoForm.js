@@ -1,27 +1,26 @@
 import React, {useState} from 'react'
+import "../styles/TodoFormSheet.css"
 
 export const TodoForm = ({addTodo}) => {
     const [value, setValue] = useState('');
 
     const handleSubmit = (e) => {
-        // prevent default action
+        // Stop any defaults
         e.preventDefault();
         if (value) {
-            // add todo
+            // Add to the todo
             addTodo(value);
-            // clear form after submission
+            // Clear after adding
             setValue('');
         }
     };
     return (
 
-        // For css:
-        // TodoForm, todo-input, todo-btn.
-        //
-
+        // Create the HTML form, button
         <form onSubmit={handleSubmit} className="TodoForm">
-            <input type="text" value={value} onChange={(e) => setValue(e.target.value)} className="todo-input" placeholder='Enter Task:' />
-            <button type="submit" className='todo-btn'>Add Task</button>
+
+            <input type="text" value={value} onChange={(e) => setValue(e.target.value)} className="todo-input" />
+            <button type="submit" className='todo-btn'>Add</button>
         </form>
     )
 }

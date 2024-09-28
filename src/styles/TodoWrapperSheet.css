@@ -1,8 +1,9 @@
 .todo-container{
 
-    padding: 5vw 5vw 5vw 5vw;
+    padding: 2vw 5vw 5vw 5vw;
     max-width: 50%;
     background-color: pink;
+    border-radius: 15px;
 
 
     display: flex;
