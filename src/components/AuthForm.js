@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import { signup, login, logout, useAuth } from "./useAuth";
 import "../styles/AuthFormSheet.css";
+import logo from "../BackgroundImages/NurtureTextLogo.gif";
+import flower from "../BackgroundImages/flowerbloom.gif";
 
 export default function AuthForm() {
   const currentUser = useAuth();
@@ -39,7 +41,8 @@ export default function AuthForm() {
         <div className="on-btn-click">
 
           <div className="welcome-msg">
-            <h2>Welcome, {currentUser.email}!</h2>
+            {/*<h2>Welcome, {currentUser.email}!</h2>*/}
+            <img src={logo} alt="Nurture"/>
             <button onClick={handleLogout}>Logout</button>
           </div>
 
@@ -47,7 +50,8 @@ export default function AuthForm() {
         </div>
       ) : (
           <div className="auth-container">
-            <h1 id="title">Nurture</h1>
+            {/*<h1 id="title">Nurture</h1>*/}
+            <img src={logo} alt="Nurture"/>
             <div className="signup-login">
               <input
                   type="email"

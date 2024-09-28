@@ -25,7 +25,7 @@ export const Todo = ({task, deleteTodo, editTodo, toggleComplete}) => {
                 <FontAwesomeIcon className="delete-icon" icon={faTrash} onClick={() => deleteTodo(task.id)}/>
 
             {/*    TODO !!! Add Checkmark icon, this will lead to adding a task to the database*/}
-                <FontAwesomeIcon icon={faCheck} />
+                <FontAwesomeIcon icon={faCheck} onClick={() => deleteTodo(task.id)}/>
 
             </div>
         </div>

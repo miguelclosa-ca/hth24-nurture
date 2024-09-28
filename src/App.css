@@ -4,7 +4,6 @@
   font-family: varela-regular, serif;
   font-weight: lighter;
   color: var(--textColour2);
-
 }
 
 
@@ -30,6 +29,7 @@
   height: 1787px;
   /*width: 823px;*/
   margin: auto;
+  overflow: hidden;
 }
 
 

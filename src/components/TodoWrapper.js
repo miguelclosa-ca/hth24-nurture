@@ -19,6 +19,9 @@ export const TodoWrapper = () => {
     const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
 
     const toggleComplete = (id) => {
+
+        deleteTodo(id)
+
         setTodos(
             todos.map((todo) =>
                 todo.id === id ? { ...todo, completed: !todo.completed } : todo
@@ -41,6 +44,7 @@ export const TodoWrapper = () => {
             )
         );
     };
+
 
     return (
 
