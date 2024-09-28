@@ -4,11 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
-import { CreateTask } from '../firestore';
+import { CreateTask, DeleteTask } from '../firestore';
+import { auth } from '../firebase';
 // css Sheet
 import "../styles/TodoSheet.css";
 
-export const Todo = ({task, deleteTodo, editTodo, toggleComplete}) => {
+export const Todo = ({task, editTodo, toggleComplete}) => {
 
     return(
         <div className="Todo">
@@ -22,11 +23,11 @@ export const Todo = ({task, deleteTodo, editTodo, toggleComplete}) => {
             <div className="Todo-icons">
                 {/* These are the buttons for edit task and delete task*/}
                 <FontAwesomeIcon className="edit-icon" icon={faPenToSquare} onClick={() => editTodo(task.id)}/>
-                <FontAwesomeIcon className="delete-icon" icon={faTrash} onClick={() => deleteTodo(task.id)}/>
+                {/* All we have to do is replace 1 with the index of the task we want deleted*/}
+                <FontAwesomeIcon className="delete-icon" icon={faTrash} onClick={() => DeleteTask(auth.currentUser.uid, 1)}/>
 
-            {/*    TODO !!! Add Checkmark icon, this will lead to adding a task to the database*/}
-            {/* _______________________________THIS IS HOW TO MAKE CALL TO DATABASE_______________________________*/}
-                <FontAwesomeIcon icon={faCheck} onClick={()=> CreateTask()} />
+            {/*This is the checkmark button*/}
+                <FontAwesomeIcon icon={faCheck} onClick={()=> CreateTask(auth, "")} />
 
             </div>
         </div>

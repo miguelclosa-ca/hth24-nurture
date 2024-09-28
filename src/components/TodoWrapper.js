@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from "uuid";
 import { EditTodoForm } from "./EditTodoForm";
 import { useAuth } from "./useAuth";
 import "../styles/TodoWrapperSheet.css"
+import { RefreshTasks } from "../firestore";
 
 export const TodoWrapper = () => {
     const [todos, setTodos] = useState([]);
@@ -15,9 +16,7 @@ export const TodoWrapper = () => {
             { id: uuidv4(), task: todo, completed: false, isEditing: false },
         ]);
     }
-
-    const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
-
+    
     const toggleComplete = (id) => {
         setTodos(
             todos.map((todo) =>
@@ -42,8 +41,10 @@ export const TodoWrapper = () => {
         );
     };
 
-    return (
+    // This variable holds all the todo tags
+    var FUCKS = RefreshTasks();
 
+    return (
         <div className="todo-container">
             {useAuth() ? ( // Show todo list if user is logged in
                 <div className="TodoWrapper">
@@ -55,9 +56,7 @@ export const TodoWrapper = () => {
                             <EditTodoForm editTodo={editTask} task={todo}/>
                         ) : (
                             <Todo
-                                key={todo.id}
                                 task={todo}
-                                deleteTodo={deleteTodo}
                                 editTodo={editTodo}
                                 toggleComplete={toggleComplete}
                             />
