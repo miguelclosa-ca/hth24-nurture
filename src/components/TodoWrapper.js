@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { Todo } from "./Todo";
 import { TodoForm } from "./TodoForm";
 import { v4 as uuidv4 } from "uuid";
 import { EditTodoForm } from "./EditTodoForm";
 import { useAuth } from "./useAuth";
 import "../styles/TodoWrapperSheet.css"
 import { RefreshTasks } from "../firestore";
+import { auth } from "../firebase";
 
 export const TodoWrapper = () => {
     const [todos, setTodos] = useState([]);
@@ -42,7 +42,7 @@ export const TodoWrapper = () => {
     };
 
     // This variable holds all the todo tags
-    var FUCKS = RefreshTasks();
+    var FUCKS = RefreshTasks(auth.currentUser.uid);
 
     return (
         <div className="todo-container">
@@ -55,11 +55,7 @@ export const TodoWrapper = () => {
                         todo.isEditing ? (
                             <EditTodoForm editTodo={editTask} task={todo}/>
                         ) : (
-                            <Todo
-                                task={todo}
-                                editTodo={editTodo}
-                                toggleComplete={toggleComplete}
-                            />
+                            FUCKS
                         )
                     )}
                 </div>
