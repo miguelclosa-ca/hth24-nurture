@@ -1,39 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+
+*{
+  font-family: varela-regular, serif;
+  font-weight: lighter;
+  color: var(--textColour2);
+
+}
+
+
+:root{
+
+  /*https://x.com/Ashaife/status/1239011834851622913 */
+  --textColour: #fff9e5;
+  --skyColour: #8ecfca;
+  --footerColour: #786951;
+  --boxColour: #f8eebc;
+  --grassColour: #68b893;
+  --textColour2: #017c74;
+
+}
+
 .App {
   text-align: center;
-  background-color: #e9f678;
-  height: 1000vw;
+  background-color: var(--skyColour);
+  height: 1000vw  ;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Todo-list{
+  padding-top: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  align-items: center;
 }
