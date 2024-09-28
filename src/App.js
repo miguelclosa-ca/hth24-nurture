@@ -2,6 +2,8 @@ import './App.css';
 import Sky from "./components/Sky.js";
 import AuthForm from './components/AuthForm';
 import {TodoWrapper} from './components/TodoWrapper';
+import Flower from './components/Flower';
+
 import Footer from './components/Footer';
 
 function App() {
@@ -14,7 +16,6 @@ function App() {
               <Sky/>
               <AuthForm/>
 
-
           </>
 
           <div className="Todo-list">
@@ -23,6 +24,7 @@ function App() {
 
           {/*TODO !!! Insert the flower here !!!*/}
 
+          <Flower/>
 
 
 

@@ -4,6 +4,7 @@
   font-family: varela-regular, serif;
   font-weight: lighter;
   color: var(--textColour2);
+
 }
 
 
@@ -22,7 +23,7 @@
 .App {
   text-align: center;
   background-color: var(--skyColour);
-  height: auto  ;
+  height: 1000vw  ;
 }
 
 
