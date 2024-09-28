@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPenToSquare } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
-
+import { CreateTask } from '../firestore';
 // css Sheet
 import "../styles/TodoSheet.css";
 
@@ -25,7 +25,8 @@ export const Todo = ({task, deleteTodo, editTodo, toggleComplete}) => {
                 <FontAwesomeIcon className="delete-icon" icon={faTrash} onClick={() => deleteTodo(task.id)}/>
 
             {/*    TODO !!! Add Checkmark icon, this will lead to adding a task to the database*/}
-                <FontAwesomeIcon icon={faCheck} />
+            {/* _______________________________THIS IS HOW TO MAKE CALL TO DATABASE_______________________________*/}
+                <FontAwesomeIcon icon={faCheck} onClick={()=> CreateTask()} />
 
             </div>
         </div>

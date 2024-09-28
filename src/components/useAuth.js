@@ -25,7 +25,7 @@ export const signup = async (email, password) => {
     const user = userCredential.user;
   
     // Initialize Firestore user profile after successful sign-up
-    await createUserProfile(user.uid, { email: user.email, createdAt: new Date() });
+    await createUserProfile(user.uid, { email: user.email, createdAt: new Date().getDay() });
 };
 
 // Login function
