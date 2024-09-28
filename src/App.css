@@ -22,8 +22,10 @@
 
 .App {
   text-align: center;
-  background-color: var(--skyColour);
+  background-image: url("./BackgroundImages/landscape idea pixel arts1.png");
   height: 1000vw  ;
+  width: 824px;
+  margin: auto;
 }
 
 

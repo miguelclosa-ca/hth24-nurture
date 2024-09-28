@@ -5,6 +5,9 @@ import Flower from './components/Flower';
 
 import Footer from './components/Footer';
 
+
+// import bg from './BackgroundImages/landscape idea pixel arts1.png';
+
 function App() {
   return (
 
