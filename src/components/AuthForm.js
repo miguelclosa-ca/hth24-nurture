@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { signup, login, logout, useAuth } from "./useAuth";
+import "../styles/AuthFormSheet.css";
 
 export default function AuthForm() {
   const currentUser = useAuth();
@@ -35,27 +36,37 @@ export default function AuthForm() {
   return (
     <div>
       {currentUser ? (
-        <div>
-          <h2>Welcome, {currentUser.email}</h2>
-          <button onClick={handleLogout}>Logout</button>
+        <div className="on-btn-click">
+
+          <div className="welcome-msg">
+            <h2>Welcome, {currentUser.email}!</h2>
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+
+
         </div>
       ) : (
-        <div>
-          <input
-            type="email"
-            placeholder="Email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button onClick={handleSignUp}>Sign Up</button>
-          <button onClick={handleLogin}>Login</button>
-        </div>
+          <div className="auth-container">
+            <h1 id="title">Nurture</h1>
+            <div className="signup-login">
+              <input
+                  type="email"
+                  placeholder="Email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+              />
+              <input
+                  type="password"
+                  placeholder="Password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+              />
+              <div className="auth-btn">
+                <button onClick={handleSignUp} className="sign-btn">Sign Up</button>
+                <button onClick={handleLogin} className="log-btn">Login</button>
+              </div>
+            </div>
+          </div>
       )}
     </div>
   );

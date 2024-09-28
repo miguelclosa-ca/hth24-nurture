@@ -1,0 +1,47 @@
+
+
+
+.TodoForm{
+
+    padding: 5px;
+
+}
+
+:root{
+
+    /*https://x.com/Ashaife/status/1239011834851622913 */
+    --textColour: #fff9e5;
+    --skyColour: #8ecfca;
+    --footerColour: #786951;
+    --boxColour: #f8eebc;
+    --grassColour: #68b893;
+
+}
+
+
+
+.todo-input{
+    border: 1.5px solid var(textColour);
+    border-radius: 15px;
+    height: 45px;
+    width: 80%;
+    background-color: var(--boxColour);
+
+
+}
+
+.todo-btn{
+    border: 1.5px solid var(textColour);
+    border-radius: 15px;
+    height: 45px;
+    width: 60px;
+
+
+
+}
+
+.todo-button{
+    margin-left: auto;
+    margin-right: 10px;
+
+}

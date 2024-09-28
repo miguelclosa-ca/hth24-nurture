@@ -1,0 +1,77 @@
+:root{
+
+    /*https://x.com/Ashaife/status/1239011834851622913 */
+    --textColour: #fff9e5;
+    --skyColour: #8ecfca;
+    --footerColour: #786951;
+    --boxColour: #f8eebc;
+    --grassColour: #68b893;
+
+}
+
+.auth-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.signup-login{
+
+    display: flex;
+    flex-direction: row;
+
+    border: 1.5px solid var(textColour);
+    border-radius: 15px;
+
+
+    background-color: pink;
+    padding: 1vw;
+
+
+
+}
+
+input{
+    background-color: var(--boxColour);
+    border: 1.5px solid var(textColour);
+    border-radius: 15px;
+}
+
+.auth-btn{
+    display: flex;
+    flex-direction: row;
+    border: 1.5px solid var(textColour);
+    border-radius: 15px;
+    height: 45px;
+    width: auto;
+}
+
+.sign-btn, .log-btn{
+    border: 1.5px solid var(textColour);
+    border-radius: 15px;
+    height: 45px;
+    width: 60px;
+}
+
+.on-btn-click{
+    background-color: pink;
+    margin-left: 35vw;
+    margin-right: 35vw;
+
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+
+    border: 1.5px solid var(textColour);
+    border-radius: 15px;
+}
+
+.on-btn-click button{
+    border: 1.5px solid var(textColour);
+    border-radius: 15px;
+    height: 45px;
+    width: auto;
+}

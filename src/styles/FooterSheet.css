@@ -6,21 +6,11 @@
     --footerColour: #786951;
     --boxColour: #f8eebc;
     --grassColour: #68b893;
+    --textColour2: #017c74;
 
 }
 
-*{
-    padding: 0;
-    margin: 0;
-
-
-}
-
-.sky-container{
-    background-color: #61dafb;
-}
-
-#title{
-    text-align: center;
-    font-size: 5em;
+.footer-container{
+    padding: 75px;
+    height: auto;
 }

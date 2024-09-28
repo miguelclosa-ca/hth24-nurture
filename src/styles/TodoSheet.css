@@ -1,0 +1,41 @@
+:root{
+
+    /*https://x.com/Ashaife/status/1239011834851622913 */
+    --textColour: #fff9e5;
+    --skyColour: #8ecfca;
+    --footerColour: #786951;
+    --boxColour: #f8eebc;
+    --grassColour: #68b893;
+
+}
+
+.Todo{
+
+    display: flex;
+    flex-direction: row;
+
+    border: 1.5px solid var(textColour);
+    margin: 15px;
+    border-radius: 15px;
+    height: 30px;
+
+
+    background-color: var(--boxColour);
+    padding: 1vw;
+
+}
+
+.Todo-task{
+    text-align: center;
+}
+
+.Todo-icons{
+    margin-left: auto;
+    text-align: right;
+    font-size: 1.25rem;
+}
+
+.edit-icon, .delete-icon{
+    color: var(--footerColour);
+    padding-right: 10px;
+}
