@@ -32,5 +32,10 @@
 .Todo-icons{
     margin-left: auto;
     text-align: right;
+    font-size: 1.25rem;
+}
 
+.edit-icon, .delete-icon{
+    color: var(--footerColour);
+    padding-right: 10px;
 }
