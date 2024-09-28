@@ -14,7 +14,7 @@
     display: flex;
     flex-direction: row;
 
-    border: 1.5px solid var(--textColour);
+    border: 1.5px solid var(textColour);
     margin: 15px;
     border-radius: 15px;
     height: 30px;
@@ -26,7 +26,7 @@
 }
 
 .Todo-task{
-    text-align: left;
+    text-align: center;
 }
 
 .Todo-icons{
