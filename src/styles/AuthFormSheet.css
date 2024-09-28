@@ -20,7 +20,6 @@
 }
 
 .signup-login{
-    /*margin-left: 5vw;*/
 
     display: flex;
     flex-direction: row;
@@ -32,6 +31,14 @@
     background-color: pink;
     padding: 1vw;
 
+
+
+}
+
+input{
+    background-color: var(--boxColour);
+    border: 1.5px solid var(textColour);
+    border-radius: 15px;
 }
 
 .auth-btn{
@@ -48,4 +55,23 @@
     border-radius: 15px;
     height: 45px;
     width: 60px;
+}
+
+.on-btn-click{
+    background-color: pink;
+    margin-left: 35vw;
+    margin-right: 35vw;
+
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+
+    border: 1.5px solid var(textColour);
+    border-radius: 15px;
+}
+
+.on-btn-click button{
+    border: 1.5px solid var(textColour);
+    border-radius: 15px;
+    height: 45px;
+    width: auto;
 }

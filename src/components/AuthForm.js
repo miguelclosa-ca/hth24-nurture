@@ -36,13 +36,18 @@ export default function AuthForm() {
   return (
     <div>
       {currentUser ? (
-        <div>
-          <h2>Welcome, {currentUser.email}</h2>
-          <button onClick={handleLogout}>Logout</button>
+        <div className="on-btn-click">
+
+          <div className="welcome-msg">
+            <h2>Welcome, {currentUser.email}!</h2>
+            <button onClick={handleLogout}>Logout</button>
+          </div>
+
+
         </div>
       ) : (
-        <div className="auth-container">
-          {/*<h1>nurture</h1>*/}
+          <div className="auth-container">
+            {/*<h1>nurture</h1>*/}
 
           <div className="signup-login">
             <input
