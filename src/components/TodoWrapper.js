@@ -3,6 +3,7 @@ import { Todo } from "./Todo";
 import { TodoForm } from "./TodoForm";
 import { v4 as uuidv4 } from "uuid";
 import { EditTodoForm } from "./EditTodoForm";
+import { useAuth } from "./useAuth";
 import "../styles/TodoWrapperSheet.css"
 
 export const TodoWrapper = () => {
@@ -44,25 +45,28 @@ export const TodoWrapper = () => {
     return (
 
         <div className="todo-container">
-
-        <div className="TodoWrapper">
-            <h1 id="enter-task">Enter Your Task: </h1>
-            <TodoForm addTodo={addTodo} />
-            {/* display todos */}
-            {todos.map((todo) =>
-                todo.isEditing ? (
-                    <EditTodoForm editTodo={editTask} task={todo} />
-                ) : (
-                    <Todo
-                        key={todo.id}
-                        task={todo}
-                        deleteTodo={deleteTodo}
-                        editTodo={editTodo}
-                        toggleComplete={toggleComplete}
-                    />
-                )
+            {useAuth() ? ( // Show todo list if user is logged in
+                <div className="TodoWrapper">
+                    <h1 id="enter-task">Enter Your Task: </h1>
+                    <TodoForm addTodo={addTodo}/>
+                    {/* display todos */}
+                    {todos.map((todo) =>
+                        todo.isEditing ? (
+                            <EditTodoForm editTodo={editTask} task={todo}/>
+                        ) : (
+                            <Todo
+                                key={todo.id}
+                                task={todo}
+                                deleteTodo={deleteTodo}
+                                editTodo={editTodo}
+                                toggleComplete={toggleComplete}
+                            />
+                        )
+                    )}
+                </div>
+            ) : ( // Show a message if the user is not logged in
+                <h2>Please log in to view your todo list.</h2>
             )}
-        </div>
         </div>
 
     );

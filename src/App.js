@@ -1,5 +1,4 @@
 import './App.css';
-import Sky from "./components/Sky.js";
 import AuthForm from './components/AuthForm';
 import {TodoWrapper} from './components/TodoWrapper';
 import Flower from './components/Flower';
@@ -13,7 +12,6 @@ function App() {
 
       <div className="App">
           <>
-              <Sky/>
               <AuthForm/>
           </>
 

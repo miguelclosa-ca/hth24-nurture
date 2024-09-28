@@ -19,6 +19,10 @@
 
 }
 
+#title{
+    font-size: 4rem;
+}
+
 .signup-login{
 
     display: flex;
