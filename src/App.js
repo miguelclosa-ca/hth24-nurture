@@ -1,7 +1,7 @@
-import './App2.css';
+import './App.css';
 import Sky from "./components/Sky.js";
 import AuthForm from './components/AuthForm';
-import TaskWrapper from "./components/TaskWrapper";
+import {TodoWrapper} from './components/TodoWrapper';
 
 function App() {
   return (
@@ -12,9 +12,17 @@ function App() {
           <>
               <Sky/>
               <AuthForm/>
-              <TaskWrapper/>
+
 
           </>
+
+          <div className="Todo-list">
+              <TodoWrapper/>
+          </div>
+
+
+
+
 
       </div>
 

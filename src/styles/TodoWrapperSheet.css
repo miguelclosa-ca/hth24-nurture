@@ -1,0 +1,14 @@
+.todo-container{
+
+    padding: 5vw 5vw 5vw 5vw;
+    max-width: 50%;
+    background-color: pink;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+
+}

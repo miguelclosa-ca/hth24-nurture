@@ -1,16 +1,17 @@
-import React, {useState} from 'react';
-import Taskform from "./Taskform";
-import Task from "./Task";
-import {v4 as uuidv4} from "uuid";
-import {EditTaskForm} from "./EditTaskForm";
+import React, { useState } from "react";
+import { Todo } from "./Todo";
+import { TodoForm } from "./TodoForm";
+import { v4 as uuidv4 } from "uuid";
+import { EditTodoForm } from "./EditTodoForm";
+import "../styles/TodoWrapperSheet.css"
 
-function TaskWrapper() {
+export const TodoWrapper = () => {
     const [todos, setTodos] = useState([]);
 
     const addTodo = (todo) => {
         setTodos([
             ...todos,
-            {id: uuidv4(), task: todo, completed: false, isEditing: false},
+            { id: uuidv4(), task: todo, completed: false, isEditing: false },
         ]);
     }
 
@@ -19,7 +20,7 @@ function TaskWrapper() {
     const toggleComplete = (id) => {
         setTodos(
             todos.map((todo) =>
-                todo.id === id ? {...todo, completed: !todo.completed} : todo
+                todo.id === id ? { ...todo, completed: !todo.completed } : todo
             )
         );
     }
@@ -27,7 +28,7 @@ function TaskWrapper() {
     const editTodo = (id) => {
         setTodos(
             todos.map((todo) =>
-                todo.id === id ? {...todo, isEditing: !todo.isEditing} : todo
+                todo.id === id ? { ...todo, isEditing: !todo.isEditing } : todo
             )
         );
     }
@@ -35,21 +36,24 @@ function TaskWrapper() {
     const editTask = (task, id) => {
         setTodos(
             todos.map((todo) =>
-                todo.id === id ? {...todo, task, isEditing: !todo.isEditing} : todo
+                todo.id === id ? { ...todo, task, isEditing: !todo.isEditing } : todo
             )
         );
     };
 
     return (
+
+        <div className="todo-container">
+
         <div className="TodoWrapper">
-            <h1>Enter A task: </h1>
-            <Taskform addTodo={addTodo}/>
+            <h1>Enter your task today: </h1>
+            <TodoForm addTodo={addTodo} />
             {/* display todos */}
             {todos.map((todo) =>
                 todo.isEditing ? (
-                    <EditTaskForm editTodo={editTask} task={todo}/>
+                    <EditTodoForm editTodo={editTask} task={todo} />
                 ) : (
-                    <Task
+                    <Todo
                         key={todo.id}
                         task={todo}
                         deleteTodo={deleteTodo}
@@ -59,7 +63,7 @@ function TaskWrapper() {
                 )
             )}
         </div>
-    );
-}
+        </div>
 
-export default TaskWrapper;
+    );
+};
