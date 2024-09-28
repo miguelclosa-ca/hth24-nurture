@@ -11,3 +11,6 @@
 }
 
 
+.ground-container{
+    background-color: var(--footerColour);
+}
