@@ -1,0 +1,73 @@
+// src/components/UserProfiles.js
+
+import React, { useState, useEffect } from "react";
+import { createUserProfile, getUserProfiles, updateUserProfile, deleteUserProfile } from "../firestore";
+import { useAuth } from "../hooks/useAuth";
+
+export default function UserProfiles() {
+  const [profiles, setProfiles] = useState([]);
+  const [newProfile, setNewProfile] = useState({ name: "", age: "" });
+  const currentUser = useAuth();
+
+  useEffect(() => {
+    const fetchProfiles = async () => {
+      const fetchedProfiles = await getUserProfiles();
+      setProfiles(fetchedProfiles);
+    };
+    fetchProfiles();
+  }, []);
+
+  const handleCreateProfile = async () => {
+    if (currentUser) {
+      await createUserProfile(currentUser.uid, newProfile);
+      setProfiles([...profiles, { ...newProfile, userId: currentUser.uid }]);
+      setNewProfile({ name: "", age: "" });
+    }
+  };
+
+  const handleUpdateProfile = async (profileId) => {
+    const updatedData = { name: "Updated Name", age: "Updated Age" };
+    await updateUserProfile(profileId, updatedData);
+    setProfiles(
+      profiles.map((profile) =>
+        profile.id === profileId ? { ...profile, ...updatedData } : profile
+      )
+    );
+  };
+
+  const handleDeleteProfile = async (profileId) => {
+    await deleteUserProfile(profileId);
+    setProfiles(profiles.filter((profile) => profile.id !== profileId));
+  };
+
+  return (
+    <div>
+      <h2>User Profiles</h2>
+      {profiles.map((profile) => (
+        <div key={profile.id}>
+          <h3>{profile.name}</h3>
+          <p>Age: {profile.age}</p>
+          <button onClick={() => handleUpdateProfile(profile.id)}>Update</button>
+          <button onClick={() => handleDeleteProfile(profile.id)}>Delete</button>
+        </div>
+      ))}
+
+      <div>
+        <h3>Create New Profile</h3>
+        <input
+          type="text"
+          placeholder="Name"
+          value={newProfile.name}
+          onChange={(e) => setNewProfile({ ...newProfile, name: e.target.value })}
+        />
+        <input
+          type="text"
+          placeholder="Age"
+          value={newProfile.age}
+          onChange={(e) => setNewProfile({ ...newProfile, age: e.target.value })}
+        />
+        <button onClick={handleCreateProfile}>Create Profile</button>
+      </div>
+    </div>
+  );
+}
