@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { onAuthStateChanged, signInWithEmailAndPassword, signOut, createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
+import {createUserProfile} from "../firestore";
 
 // Custom hook for auth state
 export const useAuth = () => {

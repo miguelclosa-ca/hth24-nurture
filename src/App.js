@@ -1,5 +1,6 @@
 import './App.css';
 import Sky from "./components/Sky.js";
+import AuthForm from './components/AuthForm';
 
 function App() {
   return (

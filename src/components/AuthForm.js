@@ -1,7 +1,7 @@
 // src/components/AuthForm.js
 
 import React, { useState } from "react";
-import { signup, login, logout, useAuth } from "useAuth";
+import { signup, login, logout, useAuth } from "./useAuth";
 
 export default function AuthForm() {
   const currentUser = useAuth();
