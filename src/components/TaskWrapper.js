@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Todolist() {
+function TaskWrapper(props) {
     return (
         <div></div>
     );
 }
 
-export default Todolist;
+export default TaskWrapper;
