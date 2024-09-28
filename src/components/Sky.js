@@ -12,7 +12,7 @@ function Sky(){
 
             <h1 id="title">Nurture</h1>
 
-
+            <h2 id="subheading">Welcome to Nurture!</h2>
 
         </div>
 
