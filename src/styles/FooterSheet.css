@@ -13,7 +13,7 @@
 
 .footer-container{
     position: absolute;
-    top: 800px;
+    top: 1050px;
     left: 0;
     width: 100%;
     padding-top: 60vh;
@@ -32,4 +32,8 @@
     padding-bottom: 2.5vh;
     margin-left: 25vw;
     margin-right: 25vw;
+}
+
+.leaf{
+    max-height: 100px;
 }
