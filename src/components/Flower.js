@@ -11,7 +11,7 @@ function Flower() {
 
             <div className="flower-formation">
                 {/*<img src={leaf} alt="leaf"/>*/}
-                <img src={flower} alt="flower"/>
+                {/*<img src={flower} alt="flower"/>*/}
             </div>
             {/*<h1>Your Flower Today</h1>*/}
 

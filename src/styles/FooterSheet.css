@@ -11,6 +11,13 @@
 }
 
 .footer-container{
+    position: absolute;
+    top: 900px;
+    left: 0;
+    width: 100%;
+    padding-top: 60vh;
+}
+
+.flower-container{
     position: relative;
-    min-height: 100vh;
 }
