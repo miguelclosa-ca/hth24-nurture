@@ -10,10 +10,30 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import "../styles/TodoSheet.css";
 import Flower from "../BackgroundImages/flowerbloom.gif";
 
+//SFX
+import playSound from "./PlaySounds";
+import soundEdit from "../SFX/25.mp3";
+import soundDelete from "../SFX/32.wav";
+import soundComplete from "../SFX/complete.wav";
+
 export const Todo = ({task, deleteTodo, editTodo, toggleComplete}) => {
 
     const [completed, setCompleted] = useState(false);
 
+    const handleEdit = () => {
+        playSound(soundEdit);
+        editTodo(task.id);
+    }
+
+    const handleDelete = () => {
+        playSound(soundDelete);
+        deleteTodo(task.id);
+    }
+
+    const handleComplete = () => {
+        playSound(soundComplete);
+        setCompleted(true)
+    }
 
     return(
         <div className="Todo">
@@ -26,11 +46,11 @@ export const Todo = ({task, deleteTodo, editTodo, toggleComplete}) => {
 
             <div className="Todo-icons">
                 {/* These are the buttons for edit task and delete task*/}
-                <FontAwesomeIcon className="edit-icon" icon={faPenToSquare} onClick={() => editTodo(task.id)}/>
-                <FontAwesomeIcon className="delete-icon" icon={faTrash} onClick={() => deleteTodo(task.id)}/>
+                <FontAwesomeIcon className="edit-icon" icon={faPenToSquare} onClick={handleEdit}/>
+                <FontAwesomeIcon className="delete-icon" icon={faTrash} onClick={handleDelete}/>
 
             {/*    TODO !!! Add Checkmark icon, this will lead to adding a task to the database*/}
-                <FontAwesomeIcon icon={faCheck} onClick={() => setCompleted(true) }/>
+                <FontAwesomeIcon icon={faCheck} onClick={handleComplete}/>
 
             </div>
         </div>

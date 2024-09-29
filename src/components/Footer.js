@@ -10,7 +10,7 @@ function Footer() {
                 {/*<img src={flower} alt="flower"/>*/}
             </div>
 
-            <img src={leaf} alt={"leaf"} className="leaf"></img>
+            <img src={flower} alt={"flower"} className="flower"></img>
             <p id="credits">A HackTheHill 2024 Project by: Max Sobota, Miguel Closa, Brady Kearley, Josh Sharpe</p>
         </div>
 
