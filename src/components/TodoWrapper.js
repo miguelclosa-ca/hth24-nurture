@@ -14,11 +14,19 @@ export const TodoWrapper = () => {
             ...todos,
             { id: uuidv4(), task: todo, completed: false, isEditing: false },
         ]);
+
     }
 
     const deleteTodo = (id) => setTodos(todos.filter((todo) => todo.id !== id));
 
     const toggleComplete = (id) => {
+
+        // const updatedTask = tasks.find((task) => task.id === id);
+        //
+        // updatedTask.completed = !updatedTask.completed;
+        //
+        // setCompleted(5);
+
 
         deleteTodo(id)
 

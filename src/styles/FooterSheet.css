@@ -12,12 +12,23 @@
 
 .footer-container{
     position: absolute;
-    top: 900px;
+    top: 1200px;
     left: 0;
     width: 100%;
     padding-top: 60vh;
+
 }
 
 .flower-container{
     position: relative;
+}
+
+#credits{
+    background-color: pink ;
+    border-radius: 15px;
+    opacity: 85%;
+    padding-top: 2.5vh;
+    padding-bottom: 2.5vh;
+    margin-left: 25vw;
+    margin-right: 25vw;
 }

@@ -1,6 +1,6 @@
 import './App.css';
 import AuthForm from './components/AuthForm';
-import {TodoWrapper} from './components/TodoWrapper';
+import {TodoWrapper, } from './components/TodoWrapper';
 import Flower from './components/Flower';
 
 import Footer from './components/Footer';
@@ -9,38 +9,33 @@ import Footer from './components/Footer';
 // import bg from './BackgroundImages/landscape idea pixel arts1.png';
 
 function App() {
-  return (
+    return (
 
       // Place elements here
+          <div className="App">
+              <>
+                  <AuthForm/>
+              </>
 
-      <div className="App">
-          <>
-              <AuthForm/>
-          </>
+              <div className="Todo-list">
+                  <TodoWrapper/>
+              </div>
 
-          <div className="Todo-list">
-              <TodoWrapper/>
+
+              <Flower/>
+
+
+
+
+
+              {/*At the bottom of the code this appears*/}
+              <Footer/>
+
+
+
+
+
           </div>
-
-          {/*TODO !!! Insert the flower here !!!*/}
-
-          {/*<Flower/>*/}
-
-          <Flower/>
-
-
-
-
-
-          {/*At the bottom of the code this appears*/}
-          <Footer/>
-
-
-
-
-
-      </div>
-
 
   );
 }

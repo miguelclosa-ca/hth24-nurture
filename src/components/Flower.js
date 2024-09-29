@@ -1,7 +1,5 @@
 import React from 'react';
 // import FlowerGround from './FlowerGround';
-import flower from "../BackgroundImages/flowerbloom.gif";
-import leaf from "../BackgroundImages/leaf.gif";
 import "../styles/FlowerSheet.css"
 
 function Flower() {

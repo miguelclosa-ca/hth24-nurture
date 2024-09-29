@@ -50,7 +50,7 @@ export default function AuthForm() {
         </div>
       ) : (
           <div className="auth-container">
-            {/*<h1 id="title">Nurture</h1>*/}
+
             <img src={logo} alt="Nurture" className="logo-title"/>
             <div className="signup-login">
               <input

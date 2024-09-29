@@ -2,9 +2,7 @@
 
 
 .TodoForm{
-
     padding: 5px;
-
 }
 
 :root{
@@ -41,7 +39,7 @@
 }
 
 .todo-button{
-    margin-left: auto;
-    margin-right: 10px;
+    margin-left: 20px;
+    margin-right: 5px;
 
 }
