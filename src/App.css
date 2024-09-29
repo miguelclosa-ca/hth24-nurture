@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Varela&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
 
 *{
-  font-family: varela-regular, serif;
+  font-family: MedievalSharp, serif;
   font-weight: lighter;
   color: var(--textColour2);
 }

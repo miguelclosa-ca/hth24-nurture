@@ -8,11 +8,12 @@
     --grassColour: #68b893;
     --textColour2: #017c74;
 
+
 }
 
 .footer-container{
     position: absolute;
-    top: 1200px;
+    top: 800px;
     left: 0;
     width: 100%;
     padding-top: 60vh;
@@ -24,7 +25,7 @@
 }
 
 #credits{
-    background-color: pink ;
+    background-color: var(--boxColour); ;
     border-radius: 15px;
     opacity: 85%;
     padding-top: 2.5vh;

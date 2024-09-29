@@ -6,6 +6,7 @@
     --footerColour: #786951;
     --boxColour: #f8eebc;
     --grassColour: #68b893;
+    --dialogueColour: #f5c24c;
 
 }
 
@@ -20,7 +21,7 @@
     height: 30px;
 
 
-    background-color: var(--boxColour);
+    background-color: var(--dialogueColour);
     padding: 1vw;
 
 }

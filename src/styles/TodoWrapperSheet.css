@@ -1,9 +1,21 @@
+:root{
+
+    /*https://x.com/Ashaife/status/1239011834851622913 */
+    --textColour: #fff9e5;
+    --skyColour: #8ecfca;
+    --footerColour: #786951;
+    --boxColour: #f8eebc;
+    --grassColour: #68b893;
+    --dialogueColour: #f5c24c;
+
+}
+
 .todo-container{
 
     /*Top right bottom left */
     /*padding: 2vw 10vw 2vw 10vw;*/
     /*margin: 2vw 10vw 2vw 10vw;*/
-    background-color: pink;
+    background-color: var(--boxColour);
     opacity: 65%;
     border-radius: 15px;
 

@@ -27,10 +27,11 @@
 
 }
 
-.todo-btn{
+.change-btn{
     border-radius: 15px;
     height: 45px;
     width: 60px;
+    margin-left: 10px;
 
 
 
