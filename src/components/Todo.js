@@ -22,7 +22,7 @@ export const Todo = ({task, deleteTodo, editTodo, toggleComplete}) => {
                 <p className={`${task.completed ? "completed" : "incompleted"}`}
                    onClick={() => toggleComplete(task.id)}>{task.task}</p>
             </div>
-            {completed === true && <img src={Flower} alt="flower"/>}
+            {completed === true && <img src={Flower} alt="flower" className="congratulations-flower"/>}
 
             <div className="Todo-icons">
                 {/* These are the buttons for edit task and delete task*/}

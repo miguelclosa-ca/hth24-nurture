@@ -28,6 +28,7 @@
 .Todo-task{
     text-align: center;
     padding: 0;
+    line-height: 1px;
 }
 
 .Todo-icons{
@@ -39,4 +40,12 @@
 .edit-icon, .delete-icon{
     color: var(--footerColour);
     padding-right: 10px;
+}
+
+.congratulations-flower{
+    margin-left: 10px;
+    padding-bottom: 7px;
+    width: 7.5%;
+
+
 }
