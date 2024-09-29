@@ -42,7 +42,7 @@ export default function AuthForm() {
 
           <div className="welcome-msg">
             {/*<h2>Welcome, {currentUser.email}!</h2>*/}
-            <img src={logo} alt="Nurture"/>
+            <img src={logo} alt="Nurture" className="logo-title"/>
             <button onClick={handleLogout}>Logout</button>
           </div>
 
@@ -51,7 +51,7 @@ export default function AuthForm() {
       ) : (
           <div className="auth-container">
             {/*<h1 id="title">Nurture</h1>*/}
-            <img src={logo} alt="Nurture"/>
+            <img src={logo} alt="Nurture" className="logo-title"/>
             <div className="signup-login">
               <input
                   type="email"
