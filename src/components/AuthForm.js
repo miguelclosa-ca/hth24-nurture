@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { signup, login, logout, useAuth } from "./useAuth";
 import "../styles/AuthFormSheet.css";
 import logo from "../BackgroundImages/NurtureTextLogo.gif";
-import flower from "../BackgroundImages/flowerbloom.gif";
 
 export default function AuthForm() {
   const currentUser = useAuth();

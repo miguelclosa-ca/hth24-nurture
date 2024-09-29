@@ -1,7 +1,6 @@
 import './App.css';
 import AuthForm from './components/AuthForm';
 import {TodoWrapper, } from './components/TodoWrapper';
-import Flower from './components/Flower';
 
 import Footer from './components/Footer';
 
@@ -20,11 +19,6 @@ function App() {
               <div className="Todo-list">
                   <TodoWrapper/>
               </div>
-
-
-              <Flower/>
-
-
 
 
 
